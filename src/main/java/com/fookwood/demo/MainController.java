@@ -1,10 +1,12 @@
 package com.fookwood.demo;
 
+import org.apache.tomcat.util.descriptor.tld.TldRuleSet.Variable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -30,6 +32,14 @@ public class MainController {
 	@RequestMapping(value="/", method= RequestMethod.GET)
 	public String home() {
 		return "home";
+	}
+	
+	//using ModelAndView
+	@GetMapping("/home2")
+	public ModelAndView home2() {
+		ModelAndView modelAndView = new ModelAndView("home");
+		modelAndView.addObject("title","model");
+		return modelAndView;
 	}
 
 }
