@@ -25,15 +25,15 @@ public class UserController {
 	
 	
 	//localhost:8080/users?userId=23
-	@GetMapping
-	public String show2(@RequestParam("userId") int id,
-			            @RequestParam int userId) {
-		return "user";
-	}
+//	@GetMapping
+//	public String show2(@RequestParam("userId") int id,
+//			            @RequestParam int userId) {
+//		return "user";
+//	}
 	
-	@GetMapping
-	public String show3 (@RequestParam(defaultValue="0") int userId) {
-		return "user";
-	}
+//	@GetMapping
+//	public String show3 (@RequestParam(defaultValue="0") int userId) {
+//		return "user";
+//	}
 
 }
